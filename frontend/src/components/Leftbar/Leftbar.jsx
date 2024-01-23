@@ -9,7 +9,7 @@ import ProfileImage from '../../assets/1.jpeg'
 
 const Leftbar = () => {
   return (
-    <div className="leftbar overflow-y-scroll sm:w-64 md:w-80 lg:w-96 xl:w-1/4 h-screen">
+    <div className="leftbar overflow-y-scroll sm:w-64 md:w-80 lg:w-96 xl:w-1/4 h-screen bg-slate-400">
       <div className="sidebarwrpper p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
         <ul className="sidebarlist p-0 m-0">
           <li className="sidebarlistitems flex items-center mb-20 sm:mb-4">
