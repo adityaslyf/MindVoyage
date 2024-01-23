@@ -30,7 +30,7 @@ const Sidebar = () => {
         <span>Dashboard</span>
       </div>
       <div>
-        <Link to="/login" className="flex flex-row space-x-4">
+        <Link to="/homepage" className="flex flex-row space-x-4">
           <CgCommunity size={32} />
           <span>Community</span>
         </Link>
