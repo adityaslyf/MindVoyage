@@ -16,7 +16,7 @@ const Sidebar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="bg-[#1C1F37] flex flex-col h-[100vh]  sm:w-64 md:w-80 lg:w-96 xl:w-[40vh] justify-between font-helvetica">
+    <div className="bg-[#1C1F37] flex flex-col h-[100vh]  sm:w-64 md:w-80 lg:w-96 xl:w-[40vh] justify-between font-helvetica text-white text-center">
       <div className=" btn  sm:hidden flex justify-end">
         <GiHamburgerMenu size={32} onClick={toggleSidebar} />
       </div>
@@ -25,39 +25,41 @@ const Sidebar = () => {
             <input type="search" placeholder="Search..." className="p-2 rounded-md flex-grow text-black" />
     </div> */}
 
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row justify-center">
+        <Link to="/" className = "flex flex-row justify-center">
         <MdSpaceDashboard size={32} />
-        <span>Dashboard</span>
-      </div>
-      <div>
-        <Link to="/homepage" className="flex flex-row space-x-4">
-          <CgCommunity size={32} />
-          <span>Community</span>
+        <span className="px-3">Dashboard</span>
         </Link>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div>
+        <Link to="/homepage" className="flex flex-row justify-center">
+          <CgCommunity size={32} />
+          <span className="px-3">Community</span>
+        </Link>
+      </div>
+      <div className="flex flex-row justify-center">
         <IoIosHeartDislike size={32} />
-        <span>Favourite</span>
+        <span className="px-3">Favourite</span>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row justify-center">
         <TbBrandBooking size={32} />
-        <span>Booking</span>
+        <span className="px-3">Booking</span>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row justify-center">
         <FaMessage size={32} />
-        <span>Message</span>
+        <span className="px-3">Message</span>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row justify-center">
         <FaHandsHelping size={32} />
-        <span>Help</span>
+        <span className="px-3">Help</span>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row justify-center">
         <IoIosSettings size={32} />
-        <span>Setting</span>
+        <span className="px-3">Setting</span>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row justify-center">
         <IoLogOut size={32} />
-        <span>Log out</span>
+        <span className="px-3">Log out</span>
       </div>
     </div>
   );

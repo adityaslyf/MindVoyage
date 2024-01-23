@@ -1,0 +1,16 @@
+.card_hover_ui, .pricing_ui{
+    transition-duration: 0.3s;
+}
+
+.card_hover_ui:hover{
+    cursor: pointer;
+    .pricing_ui{
+        background-color: #D1F366;
+        color: #141627;
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+    .pricing_ui_text, .pricing_ui_price{
+        color: #141627;
+    }
+}
