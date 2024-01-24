@@ -7,11 +7,11 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
   return (
-    <div className="flex  bg-[#141627]">
+    <div className="flex flex-row bg-[#141627]">
       <div>
         <Sidebar />
       </div>
-      <main className=" w-screen">
+      <main className=" w-[45vw]">
         <nav>
           <form
             action=""
@@ -38,7 +38,7 @@ const Dashboard = () => {
             <p className="text-[#626577] text-xl">Welcome back and explore!</p>
           </div>
           <div id="popular_destinations flex flex-col">
-            <div className="flex flex-row justify-between pr-12">
+            <div className="w-[40vw] flex flex-row justify-between">
               <h1 className="text-[#D0D4E7] mt-8 text-[1.7em]">
                 Popular Destinations
               </h1>
@@ -46,7 +46,7 @@ const Dashboard = () => {
                 View All
               </button>
             </div>
-            <div className="flex flex-row flex-wrap gap-y-9 justify-evenly mt-6 overflow-x-auto">
+            <div className="flex flex-row mt-6 overflow-x-auto">
               <DestinationCard
                 desName={"Nainital"}
                 price={"₹" + "2000"}
