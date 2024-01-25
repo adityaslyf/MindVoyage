@@ -4,6 +4,8 @@ import DestinationCard from "../../components/ReusableComponents/DestinationCard
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import "./Dashboard.css";
+import { User } from "@nextui-org/react";
+import ProfileCard from "../../components/ReusableComponents/ProfileCard";
 
 const Dashboard = () => {
   return (
@@ -72,6 +74,11 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
+      <div className="w-[20vw] mt-8 ml-10 ">
+        <div className="p-2">
+          <ProfileCard name={"Rishabh"} imgURL = {"https://rishabhguptajs.vercel.app/images/profile.jpg"} level={"Pro"}/>
+        </div>
+      </div>
     </div>
   );
 };
