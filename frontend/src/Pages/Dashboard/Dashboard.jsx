@@ -13,7 +13,7 @@ const Dashboard = () => {
       <div>
         <Sidebar />
       </div>
-      <main className=" w-[45vw]">
+      <main className=" w-[55vw]">
         <nav>
           <form
             action=""
@@ -40,7 +40,7 @@ const Dashboard = () => {
             <p className="text-[#626577] text-xl">Welcome back and explore!</p>
           </div>
           <div id="popular_destinations flex flex-col">
-            <div className="w-[40vw] flex flex-row justify-between">
+            <div className="w-[50vw] flex flex-row justify-between">
               <h1 className="text-[#D0D4E7] mt-8 text-[1.7em]">
                 Popular Destinations
               </h1>
