@@ -1,10 +1,8 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { useAuth } from "../../../../backend/context/auth";
 
 const Profile = () => {
 
-    const [user, setUser] = useState(null);
 
     useEffect(() => {
         const fetchUserProfile = async () => {
