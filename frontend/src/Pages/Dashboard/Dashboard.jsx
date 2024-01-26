@@ -36,7 +36,7 @@ const Dashboard = () => {
 
         <div className="flex flex-col ml-8 mt-6">
           <div className="flex flex-col">
-            <h1 className="text-[#D0D4E7] text-[2.5em]">Hello, User</h1>
+            <h1 className="text-[#D0D4E7] text-[2.5em]">Hello, Rishabh</h1>
             <p className="text-[#626577] text-xl">Welcome back and explore!</p>
           </div>
           <div id="popular_destinations flex flex-col">
