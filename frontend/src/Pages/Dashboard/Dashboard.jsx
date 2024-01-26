@@ -13,7 +13,7 @@ const Dashboard = () => {
       <div>
         <Sidebar />
       </div>
-      <main className=" w-[55vw]">
+      <main className="w-[55vw]">
         <nav>
           <form
             action=""
