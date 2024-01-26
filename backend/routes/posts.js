@@ -1,6 +1,6 @@
 import express from "express";
-import Post from "../models/Post";
-import User from "../models/User";
+import Post from "../models/Post.js";
+import User from "../models/User.js";
 
 const router = express.Router();
 
@@ -81,7 +81,7 @@ router.get("/timeline/all", async (req, res) => {
         return Post.find({ userId: friendId });
       })
     );
-    res.json(userPosts.concat(...friendPosts))
+    res.json(userPosts.concat(...friendPosts));
   } catch (err) {
     res.status(500).json(err);
   }

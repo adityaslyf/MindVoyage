@@ -11,15 +11,6 @@ const app = express();
 
 dotenv.config();
 
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log("Connected to MongoDB");
-  }
-);
-
-//middleware
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
