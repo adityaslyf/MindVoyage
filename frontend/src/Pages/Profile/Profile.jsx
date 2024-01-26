@@ -3,6 +3,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import { useEffect, useState } from "react";
 import "./Profile.css";
 
+
 const Profile = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
