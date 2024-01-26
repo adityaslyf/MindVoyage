@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { useEffect } from "react";
 
 const Profile = () => {
 
