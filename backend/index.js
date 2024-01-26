@@ -6,10 +6,12 @@ import morgan from "morgan";
 import userRoute from "./routes/users.js";
 import authRoute from "./routes/auth.js";
 import postRoute from "./routes/posts.js";
+import connectDB from "./config/db.js";
 
 const app = express();
 
 dotenv.config();
+connectDB();
 
 app.use(express.json());
 app.use(helmet());
