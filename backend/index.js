@@ -1,5 +1,4 @@
 import express from "express";
-import mongoose from "mongoose";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
@@ -21,6 +20,9 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(3000, () => {
+
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
   console.log("Backend server is running!");
 });
