@@ -39,8 +39,11 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="flex flex-row justify-center">
+        <Link to='/features'>
         <AiFillDownSquare size={32} />
+        
         <span className="px-3">Features</span>
+        </Link>
       </div>
       <div className="flex flex-row justify-center">
         <Link to="/book" className="flex flex-row justify-center">
