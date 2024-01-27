@@ -21,11 +21,17 @@ const Dashboard = () => {
     },
     {
       imgURL:
-        "https://media.istockphoto.com/id/1166378619/photo/large-group-of-happy-friends-in-mountains-area.jpg?s=612x612&w=0&k=20&c=PRlOrqCmlc7QEpTtQw5Blk5NlTtQzT8osgFDK8059p0=",
+        "https://images.hindustantimes.com/img/2022/09/10/550x309/central_vista_revellers_latest_news_1662770038066_1662770038195_1662770038195.jpg",
       name: "Whatever it takes!",
       desName: "Delhi",
       price: 50000,
       desc: "Perfect for group of friends, this package is a complete package of fun and adventure. You'll get to explore the hidden and unexplored places of Mukteshwar and including it, you'll get to experience the best of the best.",
+      vrModel: {
+        title: "Qutub Minar",
+        modelURL: "https://sketchfab.com/models/59fe55328271479d82acb65310178d99/embed",
+        modelTitle: "Qutub Minar",
+        modelAuthor: "shraddhakushwaha",
+      }
     },
     {
       imgURL: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/now-that-ram-mandir-in-ayodhya-has-been-inaugurated--the-city-is-set-to-witness-a-major-tourism-boom-253817519-16x9_0.jpg?VersionId=uF7qAYqwGBgIlWs8R9hOF55RQG0lMLSa&size=690:388",
