@@ -2,14 +2,12 @@ import React from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { useEffect, useState } from "react";
 import "./Profile.css";
-import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Profile = () => {
-
   useEffect(() => {
-    const fetchUserProfile = async (userID) => {
+    const fetchUserProfile = async () => {
       try {
-        const response = await fetch(`/api/profile/${userID}`);
+        const response = await fetch("/api/profile/:id");
         const userData = await response.json();
         setUser(userData);
       } catch (error) {
@@ -17,7 +15,7 @@ const Profile = () => {
       }
     };
 
-    fetchUserProfile(123);
+    fetchUserProfile();
   }, []);
 
   return (
@@ -38,17 +36,21 @@ const Profile = () => {
                     />
                   </span>
                   <h2 className="text-2xl mt-4 font-bold text-[#D1F366]">
-                    {username}
+                    rishabhguptajs
                   </h2>
                 </div>
                 <div>
                   <span className="text-white">Interests</span>
                   <div className="flex flex-row space-x-2">
-                    {interestArray.map((interest, index) => (
-                      <span key={index} className="text-sm my-2 rounded-lg cursor-pointer hover:shadow-lg hover:scale-110 transition-all bg-slate-700 p-2 text-gray-500 dark:text-gray-400">
-                        #{interest}
-                      </span>
-                    ))}
+                    <span className="text-sm my-2 rounded-lg cursor-pointer hover:shadow-lg hover:scale-110 transition-all bg-slate-700 p-2 text-gray-500 dark:text-gray-400">
+                      #travel
+                    </span>
+                    <span className="text-sm my-2 rounded-lg cursor-pointer hover:shadow-lg hover:scale-110 transition-all bg-slate-700 p-2 text-gray-500 dark:text-gray-400">
+                      #coding
+                    </span>
+                    <span className="text-sm my-2 rounded-lg cursor-pointer hover:shadow-lg hover:scale-110 transition-all bg-slate-700 p-2 text-gray-500 dark:text-gray-400">
+                      #music
+                    </span>
                   </div>
                 </div>
               </div>
