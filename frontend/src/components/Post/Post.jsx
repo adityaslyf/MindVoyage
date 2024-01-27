@@ -1,51 +1,54 @@
-import React from "react";
+import './Post.css'
 import ProfileImage from "../../assets/1.jpeg";
 import Like from "../../assets/like.png";
 import Heart from "../../assets/heart.png";
 import { CiMenuKebab } from "react-icons/ci";
+
 const Post = ({post}) => {
   console.log(post)
   return (
-    <div className="post shadow-[0_3px_10px_rgb(0,0,0,0.2)] ">
-      <div className="postWrapper  ">
+    <div className="post p-4 m-4 bg-white rounded shadow-md max-w-lg mx-auto overflow-y-auto">
+      <div className="postWrapper">
         {/* top heading */}
         <div className="postTop">
-          <div className="postTopheading flex justify-between ">
-            <div className=" flex">
+          <div className="postTopheading flex justify-between items-center">
+            <div className="flex items-center">
               <img
-                className=" w-[45px] h-[45px] object-cover rounded-[50%]"
+                className="w-12 h-12 object-cover rounded-full"
                 src={ProfileImage}
                 alt=""
               />
-              <span className="postusername mt-3 ml-2">Aditya Varshney</span>
-              <span className="postdate mt-3 ml-2">3 min ago</span>
+              <div className="ml-2">
+                <span className="postusername text-lg font-semibold">Aditya Varshney</span>
+                <span className="postdate text-sm text-gray-500 ml-4">3 min ago</span>
+              </div>
             </div>
-            <CiMenuKebab className=" mt-3" />
+            <CiMenuKebab className="text-xl text-gray-700" />
           </div>
         </div>
         {/* finishes here */}
 
-        {/*  */}
+        {/* post content */}
       </div>
-      <div className="postcenter">
-        <span>Its my first post</span>
+      <div className="postcenter mt-4">
+        <span className="block mb-4 text-lg text-gray-800">Its my first post</span>
 
         <img
-          className=" max-h-[500px] w-full object-contain"
+          className="max-h-[500px] w-full object-contain mb-4"
           src={ProfileImage}
           alt=""
         />
 
-        <div className=" flex ">
-          <img src={Like} alt="" />
-          <img src={Heart} alt="" />
-          <div className=" flex ml-64">
-          <span className=" postcounter">67 people liked it</span>
-          <span>9 people comments</span>
+        <div className="flex justify-between items-center">
+          <div className="flex space-x-2">
+            <img className="w-6 h-6" src={Like} alt="" />
+            <img className="w-6 h-6" src={Heart} alt="" />
           </div>
-          
+          <div className="flex space-x-4">
+            <span className="postcounter text-sm text-gray-500">67 people liked it</span>
+            <span className="text-sm text-gray-500">9 people comments</span>
+          </div>
         </div>
-        
       </div>
     </div>
   );
