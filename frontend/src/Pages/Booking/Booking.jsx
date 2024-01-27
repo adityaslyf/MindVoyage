@@ -25,12 +25,24 @@ const Booking = () => {
       name: "Ayodhya - The Dream",
       price: 20000,
       desc: "This package is a complete package of bhakti and devotion. You'll be experiencing Shri Ram ",
+      vrModel: {
+        title: "Ram Mandir",
+        modelURL: "https://sketchfab.com/models/d182f51001644521b66a8b013892c6fc/embed",
+        modelTitle: "Ram Mandir",
+        modelAuthor: "shraddhakushwaha",
+      },
     },
     {
-      imgURL: "URL2",
-      name: "Package 2",
-      price: 20000,
-      desc: "Description for package 2",
+      imgURL: "https://live.staticflickr.com/2370/31951271234_193987193f_b.jpg",
+      name: "The Grand Dubai Tour",
+      price: 200000,
+      desc: "Experience the vibrant allure of Dubai with our Great Dubai Tour package. Dive into the mesmerizing blend of modernity and tradition as you explore iconic landmarks like the Burj Khalifa, Palm Jumeirah, and the Dubai Mall.",
+      vrModel:{
+        title: "Dubai City",
+        modelAuthor: "shraddhakushwaha",
+        modelURL: "https://sketchfab.com/models/04847e60f32449c3b8a04431c555d175/embed",
+        modelTitle: "Dubai City",
+      }
     },
   ]);
 
