@@ -3,7 +3,8 @@ import ProfileImage from "../../assets/1.jpeg";
 import Like from "../../assets/like.png";
 import Heart from "../../assets/heart.png";
 import { CiMenuKebab } from "react-icons/ci";
-const Post = () => {
+const Post = ({post}) => {
+  console.log(post)
   return (
     <div className="post shadow-[0_3px_10px_rgb(0,0,0,0.2)] ">
       <div className="postWrapper  ">
