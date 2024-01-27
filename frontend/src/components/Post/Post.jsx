@@ -7,7 +7,7 @@ import { CiMenuKebab } from "react-icons/ci";
 const Post = ({post}) => {
   console.log(post)
   return (
-    <div className="post p-4 m-4 bg-white rounded shadow-md max-w-lg mx-auto overflow-y-auto">
+    <div className="post p-4 m-4 bg-white rounded shadow-md max-w-lg mx-auto ">
       <div className="postWrapper">
         {/* top heading */}
         <div className="postTop">
@@ -20,7 +20,7 @@ const Post = ({post}) => {
               />
               <div className="ml-2">
                 <span className="postusername text-lg font-semibold">Aditya Varshney</span>
-                <span className="postdate text-sm text-gray-500 ml-4">3 min ago</span>
+                <span className="postdate text-sm text-gray-500 ml-4">{post?.date}</span>
               </div>
             </div>
             <CiMenuKebab className="text-xl text-gray-700" />
@@ -31,11 +31,11 @@ const Post = ({post}) => {
         {/* post content */}
       </div>
       <div className="postcenter mt-4">
-        <span className="block mb-4 text-lg text-gray-800">Its my first post</span>
+        <span className="block mb-4 text-lg text-gray-800">{post?.desc}</span>
 
         <img
           className="max-h-[500px] w-full object-contain mb-4"
-          src={ProfileImage}
+          src={post?.photo}
           alt=""
         />
 
@@ -45,8 +45,8 @@ const Post = ({post}) => {
             <img className="w-6 h-6" src={Heart} alt="" />
           </div>
           <div className="flex space-x-4">
-            <span className="postcounter text-sm text-gray-500">67 people liked it</span>
-            <span className="text-sm text-gray-500">9 people comments</span>
+            <span className="postcounter text-sm text-gray-500">{post?.like} people liked it</span>
+            <span className="text-sm text-gray-500">{post?.comment} people comments</span>
           </div>
         </div>
       </div>
