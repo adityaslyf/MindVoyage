@@ -20,10 +20,11 @@ const Dashboard = () => {
       desc: "Discover the unmatched levels of enthusiasm with our latest and most popular complete package of tour of Manali",
       vrModel: {
         title: "Manali",
-        modelURL: "https://sketchfab.com/models/54ae07902bfa420e9c14a8f1d870e740/embed",
+        modelURL:
+          "https://sketchfab.com/models/54ae07902bfa420e9c14a8f1d870e740/embed",
         modelAuthor: "shraddhakushwaha",
         modelTitle: "Manali",
-      }
+      },
     },
     {
       imgURL:
@@ -34,20 +35,23 @@ const Dashboard = () => {
       desc: "Perfect for group of friends, this package is a complete package of fun and adventure. You'll get to explore the hidden and unexplored places of Mukteshwar and including it, you'll get to experience the best of the best.",
       vrModel: {
         title: "Qutub Minar",
-        modelURL: "https://sketchfab.com/models/59fe55328271479d82acb65310178d99/embed",
+        modelURL:
+          "https://sketchfab.com/models/59fe55328271479d82acb65310178d99/embed",
         modelTitle: "Qutub Minar",
         modelAuthor: "shraddhakushwaha",
-      }
+      },
     },
     {
-      imgURL: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/now-that-ram-mandir-in-ayodhya-has-been-inaugurated--the-city-is-set-to-witness-a-major-tourism-boom-253817519-16x9_0.jpg?VersionId=uF7qAYqwGBgIlWs8R9hOF55RQG0lMLSa&size=690:388",
+      imgURL:
+        "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/now-that-ram-mandir-in-ayodhya-has-been-inaugurated--the-city-is-set-to-witness-a-major-tourism-boom-253817519-16x9_0.jpg?VersionId=uF7qAYqwGBgIlWs8R9hOF55RQG0lMLSa&size=690:388",
       name: "Ayodhya - The Dream",
       desName: "Ayodhya",
       price: 20000,
       desc: "This package is a complete package of bhakti and devotion. You'll be experiencing Shri Ram ",
       vrModel: {
         title: "Ram Mandir",
-        modelURL: "https://sketchfab.com/models/d182f51001644521b66a8b013892c6fc/embed",
+        modelURL:
+          "https://sketchfab.com/models/d182f51001644521b66a8b013892c6fc/embed",
         modelTitle: "Ram Mandir",
         modelAuthor: "shraddhakushwaha",
       },
@@ -58,12 +62,13 @@ const Dashboard = () => {
       desName: "Dubai",
       price: 200000,
       desc: "Experience the vibrant allure of Dubai with our Great Dubai Tour package. Dive into the mesmerizing blend of modernity and tradition as you explore iconic landmarks like the Burj Khalifa, Palm Jumeirah, and the Dubai Mall.",
-      vrModel:{
+      vrModel: {
         title: "Dubai City",
         modelAuthor: "shraddhakushwaha",
-        modelURL: "https://sketchfab.com/models/04847e60f32449c3b8a04431c555d175/embed",
+        modelURL:
+          "https://sketchfab.com/models/04847e60f32449c3b8a04431c555d175/embed",
         modelTitle: "Dubai City",
-      }
+      },
     },
   ]);
 
@@ -112,26 +117,48 @@ const Dashboard = () => {
             </div>
             <div className="flex flex-row mt-6 flex-wrap ">
               {packageData.map((packageProps, index) => (
-                <Link key={index} to='/bookingpage' state={packageProps}>
-                <DestinationCard
-                  key={index}
-                  desName={packageProps.desName}
-                  imgURL={packageProps.imgURL}
-                  name={packageProps.name}
-                  price={packageProps.price}
-                  desc={packageProps.desc}
-                  vrModel={packageProps.vrModel}
-                  transfer={transfer}
-                />
+                <Link key={index} to="/bookingpage" state={packageProps}>
+                  <DestinationCard
+                    key={index}
+                    desName={packageProps.desName}
+                    imgURL={packageProps.imgURL}
+                    name={packageProps.name}
+                    price={packageProps.price}
+                    desc={packageProps.desc}
+                    vrModel={packageProps.vrModel}
+                    transfer={transfer}
+                  />
                 </Link>
               ))}
             </div>
           </div>
         </div>
       </main>
-      <div className="w-[20vw] mt-8 ml-10 ">
+      <div className="flex flex-col w-[20vw] mt-8 ml-10 ">
         <div className="p-2">
-          <ProfileCard name={"Rishabh"} imgURL = {"https://rishabhguptajs.vercel.app/images/profile.jpg"} level={"Pro"}/>
+          <ProfileCard
+            name={"Rishabh"}
+            imgURL={"https://rishabhguptajs.vercel.app/images/profile.jpg"}
+            level={"Pro"}
+          />
+        </div>
+        <div className="text-white m-4">
+          <div className="flex flex-col">
+            <h1 className="text-[#D0D4E7] text-2xl">Predict your next trip!</h1>
+            <a href="http://127.0.0.1:5000" target="_blank">
+              <button className="bg-[#1C1F37] p-2 m-2 my-4 text-sm rounded-sm font-semibold text-white hover:shadow-[1em] hover:translate-y-[-2px] transition-all hover:rounded-lg hover:bg-[#D1F366] hover:text-[#141627]">
+                Predict Now!
+              </button>
+            </a>
+          </div>
+          <div>
+            <h1>Plan your trip here!</h1>
+            <a href="https://397cead2868c20ac15.gradio.live" target="_blank">
+              <button className="bg-[#1C1F37] p-2 m-2 my-4 text-sm rounded-sm font-semibold text-white hover:shadow-[1em] hover:translate-y-[-2px] transition-all hover:rounded-lg hover:bg-[#D1F366] hover:text-[#141627]">
+                Plan Now!
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
