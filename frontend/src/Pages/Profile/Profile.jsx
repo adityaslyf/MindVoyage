@@ -3,7 +3,6 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import { useEffect, useState } from "react";
 import "./Profile.css";
 
-
 const Profile = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
@@ -24,20 +23,36 @@ const Profile = () => {
       <div>
         <Sidebar />
       </div>
-      <div className="border-white border-2 scrollbar-white w-[80vw] h-[90vh] m-10 scroll_container rounded-lg overflow-y-scroll">
+      <div className="border-white border-2 scrollbar-white w-[80vw] h-[90vh] m-10 scroll_container rounded-lg overflow-y-hidden">
         <div className="w-full max-w-2xl mx-auto p-4 md:p-6 lg:p-8">
           <section className="flex flex-col space-y-6">
             <div className="flex flex-col justify-between ml-4">
-              <div>
-                <span className="relative flex shrink-0 overflow-hidden rounded-full w-24 h-24">
-                  <img
-                    src="https://rishabhguptajs.vercel.app/images/profile.jpg"
-                    className="rounded-full m-1"
-                  />
-                </span>
-                <h2 className="text-2xl mt-4 font-bold text-[#D1F366]">
-                  rishabhguptajs
-                </h2>
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-col">
+                  <span className="relative flex shrink-0 overflow-hidden rounded-full w-24 h-24">
+                    <img
+                      src="https://rishabhguptajs.vercel.app/images/profile.jpg"
+                      className="rounded-full m-1"
+                    />
+                  </span>
+                  <h2 className="text-2xl mt-4 font-bold text-[#D1F366]">
+                    rishabhguptajs
+                  </h2>
+                </div>
+                <div>
+                  <span className="text-white">Interests</span>
+                  <div className="flex flex-row space-x-2">
+                    <span className="text-sm my-2 rounded-lg cursor-pointer hover:shadow-lg hover:scale-110 transition-all bg-slate-700 p-2 text-gray-500 dark:text-gray-400">
+                      #travel
+                    </span>
+                    <span className="text-sm my-2 rounded-lg cursor-pointer hover:shadow-lg hover:scale-110 transition-all bg-slate-700 p-2 text-gray-500 dark:text-gray-400">
+                      #coding
+                    </span>
+                    <span className="text-sm my-2 rounded-lg cursor-pointer hover:shadow-lg hover:scale-110 transition-all bg-slate-700 p-2 text-gray-500 dark:text-gray-400">
+                      #music
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
             <p className="text-center text-gray-500 dark:text-gray-400">
