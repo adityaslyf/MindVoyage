@@ -18,6 +18,12 @@ const Dashboard = () => {
       desName: "Manali",
       price: 10000,
       desc: "Discover the unmatched levels of enthusiasm with our latest and most popular complete package of tour of Manali",
+      vrModel: {
+        title: "Manali",
+        modelURL: "https://sketchfab.com/models/54ae07902bfa420e9c14a8f1d870e740/embed",
+        modelAuthor: "shraddhakushwaha",
+        modelTitle: "Manali",
+      }
     },
     {
       imgURL:

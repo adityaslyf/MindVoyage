@@ -12,6 +12,12 @@ const Booking = () => {
       name: "Nurturing Nature",
       price: 10000,
       desc: "Discover the unmatched levels of enthusiasm with our latest and most popular complete package of tour of Manali",
+      vrModel: {
+        title: "Manali",
+        modelURL: "https://sketchfab.com/models/54ae07902bfa420e9c14a8f1d870e740/embed",
+        modelAuthor: "shraddhakushwaha",
+        modelTitle: "Manali",
+      }
     },
     {
       imgURL:
@@ -19,6 +25,12 @@ const Booking = () => {
       name: "Whatever it takes!",
       price: 50000,
       desc: "Perfect for group of friends, this package is a complete package of fun and adventure. You'll get to explore the hidden and unexplored places of Mukteshwar and including it, you'll get to experience the best of the best.",
+      vrModel: {
+        title: "Qutub Minar",
+        modelURL: "https://sketchfab.com/models/59fe55328271479d82acb65310178d99/embed",
+        modelTitle: "Qutub Minar",
+        modelAuthor: "shraddhakushwaha",
+      }
     },
     {
       imgURL: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/now-that-ram-mandir-in-ayodhya-has-been-inaugurated--the-city-is-set-to-witness-a-major-tourism-boom-253817519-16x9_0.jpg?VersionId=uF7qAYqwGBgIlWs8R9hOF55RQG0lMLSa&size=690:388",
