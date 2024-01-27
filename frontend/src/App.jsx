@@ -15,10 +15,10 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/book" element={<Booking />} />
+        <Route path="/features" element={<Booking />} />
         <Route path="/bookingpage" element={<BookingPage />} />
         <Route path="/navbar" element={<Navbar />} />
         <Route path="/homepage" element={<Homepage />} />
-      
       </Routes>
     </Router>
   );
