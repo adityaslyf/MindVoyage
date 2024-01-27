@@ -1,157 +1,77 @@
 import "./Rightbar.css";
 import Profileimage from "../../assets/1.jpeg";
+
 const Rightbar = () => {
   return (
-    <div className="rightbar">
-      Rightbar
+    <div className="rightbar bg-[#1C1F37] text-white">
       <div className="container">
-        <div className="item mt-6">
-          <span>Suggestion for you</span>
-          <div className="user">
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                <span className="mt-2">Shrradha Kushwaha</span>
+        {/* Suggestion Section */}
+        <div className="item mt-6 m-4">
+          <h2 className="text-lg font-bold mb-4">Suggestions for You</h2>
+          <div className="user space-y-4">
+            {[...Array(2)].map((_, index) => (
+              <div key={index} className="userInfo flex justify-between items-center">
+                <div className="userdetails flex items-center">
+                  <img
+                    className="w-10 h-10 rounded-full mr-3"
+                    src={Profileimage}
+                    alt=""
+                  />
+                  <span className="font-medium">Shrradha Kushwaha</span>
+                </div>
+                <div className="userButton flex space-x-2">
+                  <button className="bg-blue-500 text-white px-3 py-1   rounded">Follow</button>
+                  <button className="bg-gray-500 text-white px-3 py-1  rounded">Dismiss</button>
+                </div>
               </div>
-              <div className="userButton flex space-x-2">
-                <button className="">Follow</button>
-                <button>Dismiss</button>
-              </div>
-            </div>
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                <span className="mt-2">Shrradha Kushwaha</span>
-              </div>
-              <div className="userButton flex space-x-2">
-                <button className="">Follow</button>
-                <button>Dismiss</button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        <div className="item mt-6">
-          <span>Last Activites</span>
-          <div className="user">
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                <span className="mt-2">Shrradha Kushwaha</span>
-                <span className="mt-2 ml-2">changed their profile page</span>
+        {/* Last Activities Section */}
+        <div className="item mt-6 m-4 ">
+          <h2 className="text-lg font-bold mb-4">Last Activities</h2>
+          <div className="user space-y-4">
+            {[...Array(4)].map((_, index) => (
+              <div key={index} className="userInfo flex justify-between items-center">
+                <div className="userdetails flex items-center">
+                  <img
+                    className="w-10 h-10 rounded-full mr-3"
+                    src={Profileimage}
+                    alt=""
+                  />
+                  <span className="font-medium">Shrradha Kushwaha</span>
+                  <span className="ml-2">liked a post</span>
+                </div>
+                <div className="status">
+                  <span className=" mr-4">1 min ago</span>
+                </div>
               </div>
-              <div className=" status  flex ">
-                <span>1 min ago</span>
-              </div>
-            </div>
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                <span className="mt-2">Shrradha Kushwaha</span>
-                <span className="mt-2 ml-2">liked a post</span>
-              </div>
-              <div className=" status  flex ">
-                <span className="mt-2 ml-2">1 min ago</span>
-              </div>
-            </div>
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                <span className="mt-2">Shrradha Kushwaha</span>
-                <span className="mt-2 ml-2">liked a post</span>
-              </div>
-              <div className=" status  flex ">
-                <span>1 min ago</span>
-              </div>
-            </div>
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                <span className="mt-2">Shrradha Kushwaha</span>
-                <span className="mt-2 ml-2">liked a post</span>
-              </div>
-              <div className=" status  flex ">
-                <span>1 min ago</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-
-        <div className="item mt-6">
-          <span>Last Activites</span>
-          <div className="user">
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-             <span>Rishab</span>
+        {/* Online Status Section */}
+        <div className="item mt-6 m-4">
+          <h2 className="text-lg font-bold mb-4">Online Status</h2>
+          <div className="user space-y-4">
+            {[...Array(4)].map((_, index) => (
+              <div key={index} className="userInfo flex justify-between items-center">
+                <div className="userdetails flex items-center">
+                  <img
+                    className="w-10 h-10 rounded-full mr-3"
+                    src={Profileimage}
+                    alt=""
+                  />
+                  <span className="font-medium">Shrradha Kushwaha</span>
+                </div>
+                <div className="status">
+                  <span className="text-green-500 mr-4">Online</span>
+                </div>
               </div>
-            
-            </div>
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-               <span>Rishab</span>
-              </div>
-            
-            </div>
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                 <span>Rishab</span>
-              </div>
-          
-            </div>
-            <div className="userInfo flex justify-between">
-              <div className="userdetails flex">
-                <img
-                  className="w-11 h-11 rounded-full"
-                  src={Profileimage}
-                  alt=""
-                />
-                <span>Rishab</span>
-              </div>
-           
-            </div>
+            ))}
           </div>
         </div>
-
       </div>
     </div>
   );

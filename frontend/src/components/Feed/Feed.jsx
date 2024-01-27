@@ -4,7 +4,7 @@ import Post from "../Post/Post";
 // import Posts from "../../DummyData";
 const Feed = () => {
   return (
-    <div className="feed">
+    <div className="feed bg-sky-100">
       <div className=" feedwrapper">
         <Share />
         {/* {Posts.ma((p) => (

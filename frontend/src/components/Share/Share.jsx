@@ -1,3 +1,4 @@
+import './Share.css'
 import ProfileImage from "../../assets/1.jpeg";
 import { MdPermMedia } from "react-icons/md";
 import { FaTag } from "react-icons/fa";
@@ -6,7 +7,7 @@ import { TfiThought } from "react-icons/tfi";
 
 const Share = () => {
   return (
-    <div className="share w-full h-[170px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="share w-full h-[170px] mr-4 mt-5 p-4 border-2 border-stone-100">
       <div className="sharewrapper p-2 ">
         <div className="sharetop flex flex-row   ">
           <img
@@ -15,7 +16,7 @@ const Share = () => {
             alt=""
           />
           <input
-            className=" ml-6"
+            className=" ml-6 border-2 border-cyan-500 rounded-md"
             placeholder="Wanna share something"
             type="text"
           />
@@ -40,7 +41,7 @@ const Share = () => {
               <span>Thoughts</span>
             </div>
 
-            <button className=" btn rounded-md bg-slate-400">Share</button>
+            <button className="btn rounded-md bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2">Share</button>
           </div>
         </div>
       </div>
