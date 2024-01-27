@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { MdSpaceDashboard } from "react-icons/md";
 import { CgCommunity } from "react-icons/cg";
@@ -27,9 +26,9 @@ const Sidebar = () => {
     </div> */}
 
       <div className="flex flex-row justify-center">
-        <Link to="/" className = "flex flex-row justify-center">
-        <MdSpaceDashboard size={32} />
-        <span className="px-3">Dashboard</span>
+        <Link to="/" className="flex flex-row justify-center">
+          <MdSpaceDashboard size={32} />
+          <span className="px-3">Dashboard</span>
         </Link>
       </div>
       <div>
@@ -43,8 +42,10 @@ const Sidebar = () => {
         <span className="px-3">Favourite</span>
       </div>
       <div className="flex flex-row justify-center">
-        <TbBrandBooking size={32} />
-        <span className="px-3">Booking</span>
+        <Link to="/book" className="flex flex-row justify-center">
+          <TbBrandBooking size={32} />
+          <span className="px-3">Booking</span>
+        </Link>
       </div>
       <div className="flex flex-row justify-center">
         <FaMessage size={32} />
