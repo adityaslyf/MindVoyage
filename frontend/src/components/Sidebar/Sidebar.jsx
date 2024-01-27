@@ -7,6 +7,7 @@ import { FaMessage } from "react-icons/fa6";
 import { FaHandsHelping } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
+import { AiFillDownSquare } from "react-icons/ai"
 // import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -38,8 +39,8 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="flex flex-row justify-center">
-        <IoIosHeartDislike size={32} />
-        <span className="px-3">Favourite</span>
+        <AiFillDownSquare size={32} />
+        <span className="px-3">Features</span>
       </div>
       <div className="flex flex-row justify-center">
         <Link to="/book" className="flex flex-row justify-center">
