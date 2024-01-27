@@ -18,6 +18,7 @@ function App() {
         <Route path="/bookingpage" element={<BookingPage />} />
         <Route path="/navbar" element={<Navbar />} />
         <Route path="/homepage" element={<Homepage />} />
+      
       </Routes>
     </Router>
   );
