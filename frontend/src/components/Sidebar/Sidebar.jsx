@@ -42,7 +42,7 @@ const Sidebar = () => {
         <span className="px-3">Favourite</span>
       </div>
       <div className="flex flex-row justify-center">
-        <Link to="/book">
+        <Link to="/book" className="flex flex-row justify-center">
           <TbBrandBooking size={32} />
           <span className="px-3">Booking</span>
         </Link>
