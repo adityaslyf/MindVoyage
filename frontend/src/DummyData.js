@@ -55,7 +55,7 @@ export const Posts = [
   {
     id: 1,
     desc: "Love For All, Hatred For None.",
-    photo: "https:img.freepik.com/free-photo/attractive-blonde-woman-sunglasses-man-white-tee-smiles-takes-selfie-near-airport_197531-23097.jpg",
+    photo:"https://images.unsplash.com/photo-1620766165457-a8025baa82e0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "5 mins ago",
     userId: 1,
     like: 32,
