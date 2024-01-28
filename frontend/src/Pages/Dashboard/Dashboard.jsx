@@ -212,7 +212,7 @@ const Dashboard = () => {
           </div>
           <div>
             <h1>Plan your trip here!</h1>
-            <a href="https://397cead2868c20ac15.gradio.live" target="_blank">
+            <a href="https://d2b0628eea8785fecb.gradio.live" target="_blank">
               <button className="bg-[#1C1F37] p-2 m-2 my-4 text-sm rounded-sm font-semibold text-white hover:shadow-[1em] hover:translate-y-[-2px] transition-all hover:rounded-lg hover:bg-[#D1F366] hover:text-[#141627]">
                 Plan Now!
               </button>
