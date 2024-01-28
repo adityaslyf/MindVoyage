@@ -1,11 +1,12 @@
-import './Post.css'
+import "./Post.css";
 import ProfileImage from "../../assets/1.jpeg";
 import Like from "../../assets/like.png";
 import Heart from "../../assets/heart.png";
 import { CiMenuKebab } from "react-icons/ci";
+import { useState } from "react";
 
-const Post = ({post}) => {
-  console.log(post)
+const Post = ({ post }) => {
+  const [like, setLike] = useState(0);
   return (
     <div className="post p-4 m-4 bg-white rounded shadow-md max-w-lg mx-auto ">
       <div className="postWrapper">
@@ -19,8 +20,12 @@ const Post = ({post}) => {
                 alt=""
               />
               <div className="ml-2">
-                <span className="postusername text-lg font-semibold">Aditya Varshney</span>
-                <span className="postdate text-sm text-gray-500 ml-4">{post?.date}</span>
+                <span className="postusername text-lg font-semibold">
+                  Aditya Varshney
+                </span>
+                <span className="postdate text-sm text-gray-500 ml-4">
+                  {post?.date}
+                </span>
               </div>
             </div>
             <CiMenuKebab className="text-xl text-gray-700" />
@@ -41,12 +46,19 @@ const Post = ({post}) => {
 
         <div className="flex justify-between items-center">
           <div className="flex space-x-2">
-            <img className="w-6 h-6" src={Like} alt="" />
+           <button   onClick={() => {
+                setLike(like + 1);
+              }}><img className="w-6 h-6" src={Like} alt="" /></button>
+            
             <img className="w-6 h-6" src={Heart} alt="" />
           </div>
           <div className="flex space-x-4">
-            <span className="postcounter text-sm text-gray-500">{post?.like} people liked it</span>
-            <span className="text-sm text-gray-500">{post?.comment} people comments</span>
+            <span className="postcounter text-sm text-gray-500">
+              {like} people liked it
+            </span>
+            <span className="text-sm text-gray-500">
+              {post?.comment} people comments
+            </span>
           </div>
         </div>
       </div>

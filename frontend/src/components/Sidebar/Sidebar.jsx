@@ -7,7 +7,7 @@ import { FaMessage } from "react-icons/fa6";
 import { FaHandsHelping } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
-import { AiFillDownSquare } from "react-icons/ai"
+import { AiFillDownSquare } from "react-icons/ai";
 // import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -39,10 +39,12 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="flex flex-row justify-center">
-        <Link to='/features'>
-        <AiFillDownSquare size={32} />
-        
-        <span className="px-3">Features</span>
+        <Link to="/features ">
+          <div className="flex flex-row">
+          <AiFillDownSquare size={32} />
+
+<span className="px-3">Features</span>
+          </div>
         </Link>
       </div>
       <div className="flex flex-row justify-center">
@@ -56,8 +58,13 @@ const Sidebar = () => {
         <span className="px-3">Message</span>
       </div>
       <div className="flex flex-row justify-center">
-        <FaHandsHelping size={32} />
-        <span className="px-3">Help</span>
+        <Link to="/help">
+          <div className="flex">
+          <FaHandsHelping size={32} />
+          <span className="px-3">Help</span>
+          </div>
+         
+        </Link>
       </div>
       <div className="flex flex-row justify-center">
         <IoIosSettings size={32} />
