@@ -36,7 +36,7 @@ const Booking = () => {
       imgURL: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/now-that-ram-mandir-in-ayodhya-has-been-inaugurated--the-city-is-set-to-witness-a-major-tourism-boom-253817519-16x9_0.jpg?VersionId=uF7qAYqwGBgIlWs8R9hOF55RQG0lMLSa&size=690:388",
       name: "Ayodhya - The Dream",
       price: 20000,
-      desc: "This package is a complete package of bhakti and devotion. You'll be experiencing Shri Ram ",
+      desc: "This package is a complete package of bhakti and devotion. You'll be experiencing Shri Ram Mandir in VR and you'll be visiting the famous places of Ayodhya.",
       vrModel: {
         title: "Ram Mandir",
         modelURL: "https://sketchfab.com/models/d182f51001644521b66a8b013892c6fc/embed",
