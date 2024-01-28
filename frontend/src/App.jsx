@@ -8,6 +8,9 @@ import Booking from "./Pages/Booking/Booking";
 import BookingPage from "./Pages/BookingPage/BookingPage";
 import Desktop from "./features/Desktop";
 import Help from './components/Help/Help'
+import Message from "./components/Message/Message";
+import Login from './Pages/auth/Login'
+import Setting from "./components/Setting/Setting";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/setting" element={<Setting />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/inbox" element={<Message />} />
         <Route path="/book" element={<Booking />} />
         <Route path="/features" element={<Booking />} />
         <Route path="/help" element={<Help />} />
