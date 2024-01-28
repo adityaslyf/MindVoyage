@@ -148,7 +148,7 @@ const Dashboard = () => {
             <div>
               <FaSearch className="text-[#a0a3bd] text-2xl mt-[1.35em] ml-[1.25em] absolute" />
               <input
-                className="p-4 my-4 w-[30vw] search_input rounded-lg bg-[rgb(28,31,55)] text-center"
+                className="p-4 my-4 w-[30vw] search_input rounded-lg bg-[rgb(223,227,255)] text-center"
                 type="text"
                 placeholder="Search for your favourite destination"
               />
