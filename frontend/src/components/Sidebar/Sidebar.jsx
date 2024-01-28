@@ -41,9 +41,8 @@ const Sidebar = () => {
       <div className="flex flex-row justify-center">
         <Link to="/features ">
           <div className="flex flex-row">
-          <AiFillDownSquare size={32} />
-
-<span className="px-3">Features</span>
+            <AiFillDownSquare size={32} />
+            <span className="px-3">Features</span>
           </div>
         </Link>
       </div>
@@ -54,25 +53,30 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="flex flex-row justify-center">
-        <FaMessage size={32} />
-        <span className="px-3">Message</span>
+        <Link to="/inbox" className="flex flex-row">
+          <FaMessage size={32} />
+          <span className="px-3">Message</span>
+        </Link>
       </div>
       <div className="flex flex-row justify-center">
         <Link to="/help">
           <div className="flex">
-          <FaHandsHelping size={32} />
-          <span className="px-3">Help</span>
+            <FaHandsHelping size={32} />
+            <span className="px-3">Help</span>
           </div>
-         
         </Link>
       </div>
       <div className="flex flex-row justify-center">
-        <IoIosSettings size={32} />
-        <span className="px-3">Setting</span>
+        <Link to="/setting" className="flex flex-row">
+          <IoIosSettings size={32} />
+          <span className="px-3">Setting</span>
+        </Link>
       </div>
       <div className="flex flex-row justify-center">
-        <IoLogOut size={32} />
-        <span className="px-3">Log out</span>
+        <Link to="/login" className="flex">
+          <IoLogOut size={32} />
+          <span className="px-3">Log out</span>
+        </Link>
       </div>
     </div>
   );
