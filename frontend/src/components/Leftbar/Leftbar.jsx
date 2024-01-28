@@ -44,19 +44,19 @@ const Leftbar = () => {
         <ul className="sidebarfriendlist">
           <li className="flex items-center text-white mb-2 sm:mb-4">
             <img className="w-6 h-6 sm:w-8 sm:h-8 rounded-full" src={ProfileImage} alt="" />
-            <span className="mx-2 text-sm sm:text-base md:text-lg">Aditya</span>
+            <span className="mx-2 text-sm sm:text-base md:text-lg"> Shraddha Kushwaha</span>
           </li>
           <li className="flex text-white items-center mb-2 sm:mb-4">
             <img className="w-6 h-6 sm:w-8 sm:h-8 rounded-full" src={ProfileImage} alt="" />
-            <span className="mx-2 text-sm sm:text-base md:text-lg">Aditya</span>
+            <span className="mx-2 text-sm sm:text-base md:text-lg"> Shraddha Kushwaha</span>
           </li>
           <li className="flex text-white items-center mb-2 sm:mb-4">
             <img className="w-6 h-6 sm:w-8 sm:h-8 rounded-full" src={ProfileImage} alt="" />
-            <span className="mx-2 text-sm sm:text-base md:text-lg">Aditya</span>
+            <span className="mx-2 text-sm sm:text-base md:text-lg"> Shraddha Kushwaha</span>
           </li>
           <li className="flex text-white items-center mb-2 sm:mb-4">
             <img className="w-6 h-6 sm:w-8 sm:h-8 rounded-full" src={ProfileImage} alt="" />
-            <span className="mx-2 text-sm sm:text-base md:text-lg">Aditya</span>
+            <span className="mx-2 text-sm sm:text-base md:text-lg"> Shraddha Kushwaha</span>
           </li>
         </ul>
       </div>

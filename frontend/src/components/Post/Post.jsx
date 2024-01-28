@@ -21,7 +21,7 @@ const Post = ({ post }) => {
               />
               <div className="ml-2">
                 <span className="postusername text-lg font-semibold">
-                  Aditya Varshney
+                  Shraddha Kushwaha
                 </span>
                 <span className="postdate text-sm text-gray-500 ml-4">
                   {post?.date}
