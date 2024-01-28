@@ -17,7 +17,7 @@ const Rightbar = () => {
                     src={Profileimage}
                     alt=""
                   />
-                  <span className="font-medium">Shrradha Kushwaha</span>
+                  <span className="font-medium">Shraddha Kushwaha</span>
                 </div>
                 <div className="userButton flex space-x-2">
                   <button className="bg-blue-500 text-white px-3 py-1   rounded">Follow</button>
@@ -40,7 +40,7 @@ const Rightbar = () => {
                     src={Profileimage}
                     alt=""
                   />
-                  <span className="font-medium">Shrradha Kushwaha</span>
+                  <span className="font-medium">Shraddha Kushwaha</span>
                   <span className="ml-2">liked a post</span>
                 </div>
                 <div className="status">
@@ -63,7 +63,7 @@ const Rightbar = () => {
                     src={Profileimage}
                     alt=""
                   />
-                  <span className="font-medium">Shrradha Kushwaha</span>
+                  <span className="font-medium">Shraddha Kushwaha</span>
                 </div>
                 <div className="status">
                   <span className="text-green-500 mr-4">Online</span>
