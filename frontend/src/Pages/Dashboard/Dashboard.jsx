@@ -7,6 +7,7 @@ import "./Dashboard.css";
 import { User } from "@nextui-org/react";
 import ProfileCard from "../../components/ReusableComponents/ProfileCard";
 import { Link, useNavigate } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -131,50 +132,79 @@ const Dashboard = () => {
     },
   ]);
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   const transfer = (bookingProps) => {
     navigate("/bookingpage", { state: bookingProps });
   };
   return (
-    <div className="flex flex-row w-[100vw] h-[100vh] bg-[#141627] overflow-hidden">
-      <div>
+    <div className="relative flex flex-col lg:flex-row w-full min-h-screen bg-[#141627] overflow-x-hidden">
+      {/* Mobile Menu Button */}
+      <div className="lg:hidden fixed top-4 left-4 z-50">
+        <button
+          onClick={toggleSidebar}
+          className="p-2 text-white hover:bg-[#1C1F37] rounded-lg"
+        >
+          <GiHamburgerMenu size={24} />
+        </button>
+      </div>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed lg:relative lg:block transition-all duration-300 ease-in-out z-40 ${
+          isSidebarOpen ? 'left-0' : '-left-full'
+        } lg:left-0`}
+      >
         <Sidebar />
       </div>
-      <main className="w-[55vw] h-full overflow-y-scroll">
+
+      {/* Overlay for mobile */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+          onClick={toggleSidebar}
+        />
+      )}
+
+      {/* Rest of your content */}
+      <main className="w-full lg:w-[55vw] h-full overflow-y-auto px-4 lg:px-0">
         <nav>
-          <form
-            action=""
-            className="h-10vh mt-4 flex ml-8 align-middle justify-between "
-          >
-            <div>
-              <FaSearch className="text-[#a0a3bd] text-2xl mt-[1.35em] ml-[1.25em] absolute" />
-              <input
-                className="p-4 my-4 w-[30vw] search_input rounded-lg bg-[rgb(223,227,255)] text-center"
-                type="text"
-                placeholder="Search for your favourite destination"
-              />
-              <button className="text-[#141627] search_btn rounded-lg bg-[#D1F366] w-fit h-fit mt-[1em] px-7 py-4">
+          <form className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 lg:ml-8">
+            <div className="w-full sm:w-auto relative flex flex-col sm:flex-row items-center gap-4">
+              <div className="relative w-full sm:w-auto">
+                <FaSearch className="text-[#a0a3bd] text-2xl absolute top-1/2 left-4 transform -translate-y-1/2" />
+                <input
+                  className="p-4 w-full sm:w-[30vw] search_input rounded-lg bg-[rgb(223,227,255)] text-center"
+                  type="text"
+                  placeholder="Search destination"
+                />
+              </div>
+              <button className="text-[#141627] search_btn rounded-lg bg-[#D1F366] w-full sm:w-auto px-7 py-4">
                 Search
               </button>
             </div>
-            <IoMdNotificationsOutline className="text-[#a0a3bd] p-2 text-xl mt-[1.30em] h-9 w-9 bg-[#1C1F37] rounded-full" />
+            <IoMdNotificationsOutline className="text-[#a0a3bd] p-2 text-xl h-9 w-9 bg-[#1C1F37] rounded-full" />
           </form>
         </nav>
-
-        <div className="flex flex-col ml-8 mt-6">
+        <div className="flex flex-col lg:ml-8 mt-6">
           <div className="flex flex-col">
-            <h1 className="text-[#D0D4E7] text-[2.5em]">Hello, Rishabh</h1>
-            <p className="text-[#626577] text-xl">Welcome back and explore!</p>
+            <h1 className="text-[#D0D4E7] text-[2em] lg:text-[2.5em]">Hello, Rishabh</h1>
+            <p className="text-[#626577] text-lg lg:text-xl">Welcome back and explore!</p>
           </div>
-          <div id="popular_destinations flex flex-col">
-            <div className="w-[50vw] flex flex-row justify-between">
-              <h1 className="text-[#D0D4E7] mt-8 text-[1.7em]">
+          <div className="flex flex-col">
+            <div className="w-full lg:w-[50vw] flex flex-row justify-between items-center">
+              <h1 className="text-[#D0D4E7] mt-8 text-[1.4em] lg:text-[1.7em]">
                 Popular Destinations
               </h1>
               <button className="text-[#D1F366] text-sm mt-8 hover:underline">
                 View All
               </button>
             </div>
-            <div className="flex flex-row mt-6 flex-wrap ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
               {packageData.map((packageProps, index) => (
                 <Link key={index} to="/bookingpage" state={packageProps}>
                   <DestinationCard
@@ -193,35 +223,42 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
-      <div className="flex flex-col w-[20vw] mt-8 ml-10 ">
-        <div className="p-2">
+
+      {/* Right sidebar */}
+      <div className="w-full lg:w-[20vw] p-4 lg:mt-8 lg:ml-10 lg:block">
+        <div className="bg-[#1C1F37] rounded-lg shadow-lg p-4">
           <ProfileCard
             name={"Rishabh"}
             imgURL={"https://rishabhguptajs.vercel.app/images/profile.jpg"}
             level={"Pro"}
           />
-        </div>
-        <div className="text-white m-4">
-          <div className="flex flex-col">
-            <h1 className="text-[#D0D4E7] text-2xl">Predict your next trip!</h1>
-            <a href="http://127.0.0.1:5000" target="_blank">
-              <button className="bg-[#1C1F37] p-2 m-2 my-4 text-sm rounded-sm font-semibold text-white hover:shadow-[1em] hover:translate-y-[-2px] transition-all hover:rounded-lg hover:bg-[#D1F366] hover:text-[#141627]">
-                Predict Now!
-              </button>
-            </a>
-          </div>
-          <div>
-            <h1>Plan your trip here!</h1>
-            <a href="https://d2b0628eea8785fecb.gradio.live" target="_blank">
-              <button className="bg-[#1C1F37] p-2 m-2 my-4 text-sm rounded-sm font-semibold text-white hover:shadow-[1em] hover:translate-y-[-2px] transition-all hover:rounded-lg hover:bg-[#D1F366] hover:text-[#141627]">
-                Plan Now!
-              </button>
-            </a>
+          <div className="text-white space-y-4 mt-4">
+            <ActionCard
+              title="Predict your next trip!"
+              buttonText="Predict Now!"
+              href="http://127.0.0.1:5000"
+            />
+            <ActionCard
+              title="Plan your trip here!"
+              buttonText="Plan Now!"
+              href="https://d2b0628eea8785fecb.gradio.live"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+const ActionCard = ({ title, buttonText, href }) => (
+  <div className="p-4 bg-[#141627] rounded-lg">
+    <h2 className="text-xl font-semibold mb-3">{title}</h2>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <button className="w-full bg-[#1C1F37] p-2 rounded-md font-semibold text-white hover:bg-[#D1F366] hover:text-[#141627] transition-all">
+        {buttonText}
+      </button>
+    </a>
+  </div>
+);
 
 export default Dashboard;
